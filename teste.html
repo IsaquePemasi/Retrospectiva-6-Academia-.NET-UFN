@@ -7,12 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        var cliks = 0;
+        function ex01() {
+    var nome = document.getElementById("nome")
+    var idade = document.getElementById("idade")
+
+    console.log(nome.value + " tem " + idade.value + " anos")
+}
+function ex02() {
+    var nome = document.getElementById("nome")
+    var idade = parseInt(document.getElementById("idade").value)
+    if (idade >= 18) {
+        console.log(nome.value + " é maior de idade")
+    }
+    else {
+        console.log(nome.value + "Não é maior de idade")
+    }
+}
     </script>
 </head>
 
 <body>
-    <button onclick="clicks++; (clicks <= 5)?alert(clicks):console.log(clicks);">Ok!</button>
-</body>
-
+    Exercicio 1:
+    <input type="text" id="nome">
+    <input type="text" id="idade">
+    <button onclick="ex01()">Dados</button</body>
 </html>
